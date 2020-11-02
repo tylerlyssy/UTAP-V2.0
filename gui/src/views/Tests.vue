@@ -1,15 +1,12 @@
 <template>
-  <v-item-group
-    style="width: 100%"
-  >
-    <v-container>
-      <list :items="$store.getters.tests"/>
-    </v-container>
-  </v-item-group>
+  <list
+    :items="$store.getters.tests"
+    collection="tests"
+  />
 </template>
 
 <script>
-import List from '../components/list'
+import List from '../components/List'
 
 export default {
   name: 'Tests',

@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'util',
     'tests',
     'devices',
-    'tags'
+    'tags',
+    'plans'
 ]
 
 MIDDLEWARE = [

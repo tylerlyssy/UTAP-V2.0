@@ -1,14 +1,8 @@
 from rest_framework import serializers
 from .models import Test
 from tags.models import Tag
+from util.serializers import TagsField
 
-
-class TagsField(serializers.RelatedField):
-    def to_representation(self, value):
-        return value.name
-
-    def to_internal_value(self, data):
-        return Tag.objects.get(name=data)
 
 class TestSerializer(serializers.HyperlinkedModelSerializer):
     tags = TagsField(queryset=Tag.objects.all(), many=True)

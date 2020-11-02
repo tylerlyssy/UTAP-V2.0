@@ -1,13 +1,17 @@
 <template>
-  <v-row>
-    <h1>PLANS</h1>
-  </v-row>
+  <list
+    :items="$store.getters.plans"
+    collection="plans"
+  />
 </template>
 
 <script>
-// @ is an alias to /src
+import List from '../components/List'
 
 export default {
-  name: 'Plans'
+  name: 'Plans',
+  components: {
+    List,
+  }
 }
 </script>

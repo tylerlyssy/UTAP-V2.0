@@ -28,7 +28,6 @@
               <v-list-item
                 v-for="(item, i) in test.steps.split('\n')"
                 :key="i"
-                :inactive="inactive"
               >
                 <v-list-item-content>
                   <v-list-item-title>
@@ -53,11 +52,6 @@
 import _ from 'lodash'
 export default {
   name: 'TestDetail',
-  data: () => {
-    return {
-      steps: ''
-    }
-  },
   computed: {
     test () {
       return this.$store.getters.test_by_id(parseInt(this.$route.params.id))

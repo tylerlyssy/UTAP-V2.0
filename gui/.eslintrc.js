@@ -16,7 +16,10 @@ module.exports = {
     'no-unused-vars': 'off',
     'prefer-const': 'off',
     'quote-props': 'off',
-    'comma-dangle': 'off'
+    'comma-dangle': 'off',
+    'space-before-function-paren': 'off',
+    'no-eval': 'off',
+    'no-new-func': 'off'
   },
   overrides: [
     {
